@@ -1,16 +1,186 @@
-# React + Vite
+# CLI-NVG — React Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Overview
 
-Currently, two official plugins are available:
+CLI-NVG is a modern single-page application built with **React**, created using the **React CLI tooling**, and structured around **React Router** for client-side navigation.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The project demonstrates best practices on:
 
-## React Compiler
+* Folder structure organization
+* Routing between pages
+* Reusable components
+* UI styling with Tailwind CSS
+* Scroll effects and background animations
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
+## Screeshots
+Home
+![alt text](public/home1.png)
+Home
+![alt text](public/home2.png)
+Sign in
+![alt text](public/signIn.png)
+Sign up
+![alt text](public/signUp.png)
+---
 
-## Expanding the ESLint configuration
+## 🏗️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Technology           | Purpose                                     |
+| -------------------- | ------------------------------------------- |
+| **React**            | Main UI library                             |
+| **React Router**     | Page navigation and routing                 |
+| **React CLI**        | Project scaffolding and development tooling |
+| **Tailwind CSS**     | Fast and responsive styling                 |
+| **JavaScript / JSX** | Component logic and UI rendering            |
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+ ├─ assets/               # Static images and files
+ ├─ pages/                # Application pages
+ │   ├─ home/             # Home page
+ │   └─ login/            # Login page
+ ├─ App.jsx               # Routing configuration
+ ├─ main.jsx              # Entry point
+ └─ index.css             # Global styles
+```
+
+---
+
+## 🔀 Routing
+
+Navigation is handled with **React Router v6**.
+
+### Example of routes:
+
+```jsx
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/home";
+import Login from "./pages/login";
+import SignUp from "./pages/signUp";
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signUp" element={<SignUp />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+```
+
+✔ No page reload
+✔ Fast navigation
+✔ URL-based routing
+
+---
+
+## 🎨 UI & Styling
+
+The interface is built with **Tailwind CSS**, using:
+
+* Utility-first classes
+* Responsive layouts
+* Blur and transparency
+* Background images and parallax effects
+
+### Example:
+
+```jsx
+<div
+  className="min-h-screen bg-cover bg-center"
+  style={{ backgroundImage: `url(${bgImage})` }}
+>
+```
+
+---
+
+## 🧭 Pages Included
+
+### 🏠 Home Page
+
+* Hero section with scroll effects
+* Navigation links (`Login`, `Sign Up`)
+* Dynamic background resizing
+
+### 🔐 Login Page
+
+* Email + password inputs
+* Styled form layout
+* Redirect link to Sign Up
+
+### 📝 Sign Up Page
+
+* Name, email, password fields
+* Matching visual style
+* Redirect link back to Login
+
+---
+
+## ▶️ Running the Project
+
+### Install dependencies:
+
+```bash
+npm install
+```
+
+### Start the development server:
+
+```bash
+npm run dev
+```
+
+Then open:
+
+👉 [http://localhost:5173](http://localhost:5173)
+
+---
+
+## 📦 Build for Production
+
+```bash
+npm run build
+```
+
+Creates an optimized build in:
+
+```
+dist/
+```
+
+---
+
+## 🤝 Contributing
+
+Feel free to open issues or submit pull requests.
+Suggestions for additional features are welcome!
+
+---
+
+## 📄 License
+
+This project is released under the **MIT License**.
+
+---
+
+## 🌟 Summary
+
+CLI-NVG is a practical example of:
+
+* React application setup with React CLI
+* Navigation through React Router
+* Tailwind UI design
+* Image backgrounds & animation effects
+
+
+
+Use it as a base or template for larger applications.
+
