@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import bgImage from './../../assets/bgImage.jpg'
-
+import { useNavigate } from 'react-router-dom'
 
 export default function Home() {
+    const navigate = useNavigate();
+    
     const [scrollEffect, setScrollEffect] = useState({
         backgroundSize: 250,
         blur: 0,

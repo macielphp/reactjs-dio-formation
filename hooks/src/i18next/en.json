@@ -1,0 +1,9 @@
+{
+  "headers": {
+    "message": "Welcome! This is an example of a custom hook for language selection.",
+    "select": "Select a language from the dropdown above to see the magic happen!"
+  },
+  "buttons": {
+    "learnMore": "Read the documentation"
+  }
+}

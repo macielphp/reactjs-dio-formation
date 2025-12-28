@@ -1,0 +1,9 @@
+{
+  "headers": {
+    "message": "¡Hola! Este es un ejemplo de un hook personalizado para la selección de idioma.",
+    "select": "Selecciona un idioma en el menú desplegable de arriba para ver la magia suceder."
+  },
+  "buttons": {
+    "learnMore": "Leia a documentação"
+  }
+}
